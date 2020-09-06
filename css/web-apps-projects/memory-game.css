@@ -1,0 +1,329 @@
+
+#result {
+    display: none;
+}
+
+#the-memory-game {
+    padding-bottom: 50px;
+}
+
+
+#wrapper-memory-game { 
+  background: #cecece;
+  max-width: 900px; 
+  margin: 0 auto 40px;
+  border-radius: .35em;
+  overflow: hidden;
+  box-shadow: 0 0 26px rgba(0,0,0, .13);  
+  padding-bottom: 10px;
+}
+
+#memory-game-result {
+    top: 80%;
+    left: 50%;
+    position: absolute;
+    width: 350px;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+#container {
+    margin: 10px auto; 
+    max-width: 640px;
+}
+
+#information {
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.text {
+    color: #fff;
+}
+.button {
+    background: #e74c3c;
+    color: #fff;
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: help;
+} 
+
+.memory-game-result {
+    height: 40vh; 
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(/images/photos/work/memory-game-have-fun.jpg);
+    background-size: cover;
+    background-position: 50% 10%;
+    position: relative;
+}
+
+
+#images div {
+    float: left; 
+    width: 19%; 
+    height: 122px; 
+    margin: 0.5%; 
+    cursor: pointer;
+    background: #fff;
+}
+
+#images div img {  
+    display: none; 
+    width: 100%; 
+}
+
+#resultDiv { 
+    display: none;
+    margin: 30px 0;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    text-align: center; /*
+}
+
+
+/*************** MEDIA QUERIES FOR THE MEMORY GAME ****************/
+ 
+    
+@media only screen and (max-width: 650px) {
+        #images div {
+            height: 120px;
+        }
+    
+}
+
+@media only screen and (max-width: 640px) {
+        #images div {
+            height: 118px; 
+        }
+    
+}
+
+@media only screen and (max-width: 630px) {
+        #images div {
+            height: 115px; 
+        }
+    
+}
+
+@media only screen and (max-width: 610px) {
+        #images div { 
+            height: 112px;
+        }
+    
+}
+
+@media only screen and (max-width: 600px) {
+        #images div { 
+            height: 111px; 
+        }
+    
+}
+
+@media only screen and (max-width: 590px) {
+        #images div { 
+            height: 109px; 
+        }
+    
+}
+
+@media only screen and (max-width: 580px) {
+        #images div {
+            height: 107px; 
+        }
+    
+}
+
+@media only screen and (max-width: 570px) {
+        #images div {
+            height: 105px; 
+        }
+    
+}
+
+@media only screen and (max-width: 560px) {
+        #images div {
+            height: 103px; 
+        }
+    
+}
+
+@media only screen and (max-width: 550px) {
+        #images div {
+            height: 101px; 
+        }
+    
+}
+
+@media only screen and (max-width: 540px) {
+        #images div {
+            height: 99px; 
+        }
+    
+}
+
+@media only screen and (max-width: 530px) {
+        #images div {
+            height: 97px; 
+        }
+    
+}
+
+@media only screen and (max-width: 520px) {
+        #images div {
+            height: 95px; 
+        }
+    
+}
+
+@media only screen and (max-width: 510px) {
+        #images div {
+            height: 93px; 
+        }
+    
+}
+
+@media only screen and (max-width: 500px) {
+        #images div {
+            height: 91px; 
+        }
+    
+}
+
+@media only screen and (max-width: 490px) {
+        #images div {
+            height: 89px; 
+        }
+    
+}
+
+@media only screen and (max-width: 480px) {
+        #images div {
+            height: 87px; 
+        }
+    
+}
+
+@media only screen and (max-width: 470px) {
+        #images div {
+            height: 85px; 
+        }
+    
+}
+
+@media only screen and (max-width: 460px) {
+        #images div { 
+            height: 83px;
+        }
+    
+}
+
+@media only screen and (max-width: 450px) {
+        #images div { 
+            height: 81px; 
+        }
+    
+}
+
+@media only screen and (max-width: 440px) {
+        #images div { 
+            height: 79px; 
+        }
+    
+}
+
+@media only screen and (max-width: 430px) {
+        #images div {
+            height: 77px; 
+        }
+    
+}
+
+@media only screen and (max-width: 420px) {
+        #images div {
+            height: 75px; 
+        }
+    
+}
+
+@media only screen and (max-width: 410px) {
+        #images div {
+            height: 73px; 
+        }
+    
+}
+
+@media only screen and (max-width: 400px) {
+        #images div {
+            height: 71px; 
+        }
+    
+}
+
+@media only screen and (max-width: 390px) {
+        #images div {
+            height: 69px; 
+        }
+    
+}
+
+@media only screen and (max-width: 380px) {
+        #images div {
+            height: 67px; 
+        }
+    
+}
+
+@media only screen and (max-width: 370px) {
+        #images div {
+            height: 65px; 
+        }
+    
+}
+
+@media only screen and (max-width: 360px) {
+        #images div {
+            height: 63px; 
+        }
+    
+}
+
+@media only screen and (max-width: 350px) {
+        #images div {
+            height: 61px; 
+        }
+    
+}
+
+@media only screen and (max-width: 340px) {
+        #images div {
+            height: 59px; 
+        }
+    
+}
+
+@media only screen and (max-width: 330px) {
+        #images div {
+            height: 57px; 
+        }
+    
+}
+
+@media only screen and (max-width: 320px) {
+        #images div {
+            height: 55px; 
+        }
+    
+}
+
+
+
+
+
+
+
+
+
+
+

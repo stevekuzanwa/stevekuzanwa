@@ -1,0 +1,94 @@
+
+
+
+
+.ui-ux-designs{
+   background-color: #efefef; 
+    
+}
+
+#hooked-ui-ux-project img,
+#hiired-ui-ux-project img,
+.ui-ux-designs .img-high-fidelity-wireframes,  
+.ui-ux-designs .img-mockups { 
+    width: 26%;
+    max-width: 1200px;
+    margin-left: 37%;
+    margin-right: 37%;
+    margin-bottom: 0;
+    border: 1px solid grey;
+}
+
+.ui-ux-designs .img-high-fidelity-wireframes,
+.ui-ux-designs .img-mockups { 
+    margin-bottom: 2%;
+}
+
+
+.ui-ux-designs #hooked-project {
+    padding: 0;
+}
+
+
+.work ul.ui-ux-projects li {
+    width: 26%;
+    float: left;
+    margin: 2% 12%;
+    overflow: hidden;
+    position: relative;
+    line-height: 0;
+    border: 1px solid grey;
+}
+
+.work ul.ui-ux-projects img {
+    width: 100%;
+}
+
+#hooked-low-fidelity-wireframes,
+#hiired-low-fidelity-wireframes,
+#hooked-high-fidelity-wireframes,
+#hiired-high-fidelity-wireframes,
+#hooked-mockups,
+#hiired-mockups {
+    margin-bottom: 0;
+}
+
+
+#hooked-mockups, 
+#hiired-mockups {
+    padding-bottom: 80px;
+}
+
+
+/*************** MEDIA QUERIES FOR THE UI UX DESIGN PROJECTS ****************/
+ 
+    
+@media only screen and (max-width: 768px) {
+    
+    
+    #hooked-ui-ux-project img,
+    #hiired-ui-ux-project img,
+    .ui-ux-designs .img-high-fidelity-wireframes,  
+    .ui-ux-designs .img-mockups { 
+        width: 30%;
+        max-width: 1200px;
+        margin-left: 35%;
+        margin-right: 35%;
+        margin-bottom: 0;
+}
+    
+    .work ul.ui-ux-projects li {
+        width: 30%;
+        float: left;
+        margin: 2% 10%;
+    }
+    
+}
+
+
+
+
+
+
+
+

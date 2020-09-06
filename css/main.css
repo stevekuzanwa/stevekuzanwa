@@ -1,0 +1,2410 @@
+/***********************************************/
+/*************** GENERAL STYLES ****************/
+/***********************************************/
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/******************************************************/
+/*************** START: HEADER SECTION ****************/
+/******************************************************/
+
+/** Navigation **/
+
+.navigation {
+    width: 100%;
+    z-index: 9999;
+    background-color: transparent;
+    position: fixed;
+    top:0;
+}
+
+
+.header .navigation h1 {
+    float: left;
+    padding: 16px 0 16px 10px;
+    color: #fff;
+    font-size: 26px;
+    z-index: 999;
+}
+
+.header .navigation h1  a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/** Nav Menu **/
+
+.header .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.header .navigation ul li {
+    float: left;
+}
+
+.header .navigation ul li a:link,
+.header .navigation ul li a:visited {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    padding: 24px  10px 24px;
+    text-decoration: none;
+    color: #fff;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.header .navigation ul li a:hover,
+.header .navigation ul li a:active {
+    color: #ff6f60;
+}
+
+/** StickyNav with jQuery**/
+
+.is-sticky .navigation {
+    background-color:  #fff;
+    width: 100%;
+    border-bottom: 1px solid #b5b2b2;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    z-index: 9999;
+}
+
+.is-sticky .navigation h1 {
+    float: left;
+    padding: 16px 0 16px 10px;
+    font-size: 26px;
+    color: #e74c3c;
+}
+
+.is-sticky .navigation h1 a {
+    color: #e74c3c;
+}
+
+.is-sticky .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.is-sticky .navigation ul li {
+    float: left;
+}
+
+.is-sticky .navigation nav ul a:link, 
+.is-sticky .navigation  nav ul a:visited  {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    padding: 24px  10px 24px;
+    text-decoration: none;
+    color: #e74c3c;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.is-sticky .navigation nav ul a:hover, 
+.is-sticky .navigation nav ul a:active {
+    color: #000;
+}
+
+.is-sticky .navigation nav ul a.active {
+    background-color: #e74c3c;
+    color: #fff; 
+}
+
+
+/** Mobile Nav Menu **/
+
+.mobileNavIcon {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    display: none;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-7px, -6px) ;
+    transform: rotate(45deg) translate(-7px, -6px) ;
+}
+
+.is-sticky .navigation .mobileNavIcon .bar1,
+.is-sticky .navigation .mobileNavIcon .bar2,
+.is-sticky .navigation .mobileNavIcon .bar3 {
+    background-color: #e74c3c;
+}
+
+/** BG Slides **/
+
+.header #home {
+    z-index: 1;
+	position: relative;
+    height: 650px;
+}
+
+.header .slides {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+.header .slides .slide1 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/header/backgroundHeaderImage1.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/header/backgroundHeaderImage1.jpg);
+    background-position: bottom;
+}
+
+.header .slides .slide2 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/header/backgroundHeaderImage2.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/header/backgroundHeaderImage2.jpg);
+    background-position: bottom;
+}
+
+.header .slides .slide3 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/header/backgroundHeaderImage3.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/header/backgroundHeaderImage3.jpg);
+    background-position: top center;
+}
+
+.header .slides .slide1,
+.header .slides .slide2,
+.header .slides .slide3 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+}
+
+
+
+
+/** Header Subtitle ***/
+
+.header .title {
+    text-align: center;
+    font-size: 51px;
+    color: #fff;
+    width: 100%;
+    padding: 200px 20px  0;
+    background-color: transparent;
+}
+
+.header .details {
+    text-align: center;
+    font-size: 40px;
+    padding: 0 20px;
+    font-weight: 300;
+    color: #fff;
+}
+
+/** Button Area **/
+
+.header .buttons {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.header .buttons a:link,
+.header .buttons a:visited {
+    border: 2px solid #fff;
+    padding: 10px  16px;
+    font-weight: bold;
+    color: #fff;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s; 
+    cursor: pointer;
+    text-decoration: none;
+} 
+
+
+.header .buttons a:hover,
+.header .buttons a:active {
+	color: #e74c3c;
+    background-color: white;
+}
+
+/** Social Media Icons **/
+
+.header .container .socialMedia a {
+    text-decoration: none;
+}
+
+.header .socialMedia .connectWithMe {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.header .socialMedia  .connectWithMe div {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 8px 9px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid  #fff;
+    background-color:  transparent;
+    color: #fff;
+    border-radius: 100px;
+    text-align: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.header .socialMedia .connectWithMe  div.github{
+    padding: 8px 10px;
+}
+
+.header .socialMedia .connectWithMe div:hover {
+    background-color: #fff;
+    color: #e74c3c;
+    border: 2px solid #fff;
+}
+
+
+
+/*************** MEDIA QUERIES FOR THE HEADER SECTION ****************/
+
+@media only screen and (max-width: 1024px) {
+    .header .slides .slide1,
+    .header .slides .slide2,
+    .header .slides .slide3 {
+        height: 500px;
+    } 
+    
+    .header .title {
+        font-size: 41px;
+        width: 100%;
+        margin-top: 136px;
+        padding: 0 10px;
+    }
+
+    .header .details {
+        font-size: 30px;
+        padding: 0 10px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) { 
+    
+    /** Mobile Navigation **/
+
+    .mobileNavIcon {
+        display: block;    
+    }  
+
+    .navigation {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .header .navigation h1 {
+        color: #fff;
+    }
+
+    
+    .header .navigation h1 {
+        font-size: 18px;
+        float: none;
+    }
+    
+    .header .navigation ul {
+       float: none;
+       display: none;
+       background-color: #e74c3c;
+    }
+    
+    .header .navigation ul li {
+       float: none;
+    }
+
+    .header .navigation ul li a:hover,
+    .header .navigation ul li a:active {
+        color: #000;
+    }
+    
+    .is-sticky .navigation h1 {
+        color: #e74c3c;
+    }
+
+    
+    .is-sticky .navigation ul {
+        background-color: #e74c3c;
+        border-top: 1px solid #b5b2b2;
+    }
+    
+    .is-sticky .navigation nav ul a:link, 
+    .is-sticky .navigation  nav ul a:visited  {
+        color: #fff;
+    }
+
+    .is-sticky .navigation nav ul a:hover, 
+    .is-sticky .navigation nav ul a:active {
+        color: #000;
+    }
+    
+    .is-sticky .navigation nav ul a.active {
+        color: #000; 
+    }
+    
+    /** Background Header **/
+    .header .slides .slide1 {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/header/smallBgHeaderImage1.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/header/smallBgHeaderImage1.jpg);
+    }
+
+    .header .slides .slide2 {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/header/smallBgHeaderImage2.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/header/smallBgHeaderImage2.jpg);
+    }
+
+
+    .header .slides .slide3 {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/header/smallBgHeaderImage3.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/header/smallBgHeaderImage3.jpg);
+    }
+   
+}
+
+@media only screen and (max-width: 650px) {
+
+    .header .title {
+        font-size: 31px;
+    }
+
+    .header .details {
+        font-size: 25px;
+    }
+    
+    .header .buttons {
+        padding: 0 10px;
+    }
+    
+    .header .socialMedia .connectWithMe {
+        margin-top: 6%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+     
+    .header .socialMedia .connectWithMe {
+        margin-top: 10%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .header .navigation h1 {
+        font-size: 16px;
+    }
+    
+    .header .title {
+        font-size: 25px;
+    }
+
+    .header .details {
+        font-size: 20px;
+    }
+    
+    .header .buttons {
+        margin-top: 30px;
+    }
+    
+    .header .buttons a {
+        padding: 10px  16px;
+        display: block;
+        margin: 0 auto;
+        width: 150px;
+        text-align: center;
+    } 
+}
+
+@media only screen and (max-width: 275px) {
+    .header .title {
+        margin-top: 96px;
+    }
+}
+
+
+/****************************************************/
+/*************** END: HEADER SECTION ****************/
+/****************************************************/
+
+
+
+/*****************************************************/
+/************** START: PROCESS SECTION ***************/
+/*****************************************************/
+
+.process {
+   margin-top: 585px;
+}
+
+.process  .container {
+    padding: 81px   10px   0;
+    text-align: center; 
+
+}
+
+.process  #hereIsTheProcess {
+    padding: 51px   10px   0;
+    text-align: center; 
+
+}
+
+/** Process Introduction **/
+
+.process .title {
+   font-size: 30px;
+}
+
+.process .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #e74c3c;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+
+.process p {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.process #theProcess p {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/** My Process **/
+
+.process .myProcess {
+    margin-bottom: 101px;
+}
+
+.process h2 {
+    margin-bottom: 18px; 
+}
+
+.process #discovery {
+    background-image: url(../images/icons/discovery.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 100px;
+}
+
+.process #design {
+    background-image: url(../images/icons/design.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 100px;
+}
+
+.process #develop {
+    background-image: url(../images/icons/develop.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 100px;
+}
+
+.process #launch {
+    background-image: url(../images/icons/launch.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 100px;
+}
+
+
+
+.process .row h2 {
+    font-size: 20px;
+}
+
+.process .row p{
+    font-size: 16px;
+    margin-bottom: 58px;
+}
+
+
+/** Button Area **/
+
+.process a:link,
+.process a:visited {
+    padding: 15px 20px;
+    background-color: #e74c3c;
+    color:#fff;
+    font-weight: bold;
+    font-size: 16px;
+    outline: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; 
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+}
+
+.process a:hover,
+.process a:active {
+	background-color: #fff;
+    color: #e74c3c;
+    border: 2px solid #e74c3c;
+}
+
+/** POPUP - PROCESS READ MORE CONTENT  **/
+
+.process-popup  {
+  position: relative;
+  background: #fff;
+  width: auto;
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 16px;
+}
+
+.process-popup  p { 
+  line-height: 150%;
+}
+
+
+.process-popup img {
+    width: 100%;
+}
+
+.process-popup P {
+ padding: 20px;
+}
+
+
+/*************** MEDIA QUERIES FOR THE PROCESS SECTION ****************/
+
+@media only screen and (max-width: 1130px) {
+ 
+    
+    .process  #hereIsTheProcess {
+        margin-bottom: 21px;
+    }
+    
+    
+    .process .row {
+        width: 48%;
+    }
+    
+    .process .col {
+        margin: 1%  1%  90px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 1024px) {
+     .process {
+       margin-top: 435px;
+    }
+
+   
+}
+
+
+@media only screen and (max-width: 916px) {
+    
+    .process  #hereIsTheProcess {
+        margin-bottom: 21px;
+    }
+    
+    
+    .process .row {
+        width: 100%;
+    }
+    
+    .process .col {
+        margin: 1%  0  90px;
+    }
+
+}
+
+
+
+
+@media only screen and (max-width: 800px) {
+    
+    .process .row h2 {
+        font-size: 22px;
+    }
+    
+}
+
+@media only screen and (max-width: 480px) {
+     .process .title {
+       font-size: 25px;
+     }
+
+     .process .title:after {
+       height: 6px;
+       width: 42px;
+       margin-top: 10px;
+     }
+    
+}
+
+
+/*****************************************************/
+/*************** END: PROCESS SECTION ****************/
+/*****************************************************/
+
+     
+
+
+
+
+/******************************************************/
+/************** START: ABOUT ME SECTION ***************/
+/******************************************************/
+
+.about-me {
+    height: 550px;
+}
+
+.about-me div {
+    float: left;
+}
+
+
+.about-me  .this-is-me {
+   background-color: #e74c3c;
+   color: #fff;
+   width: 50%;
+   height: 550px;
+   padding: 81px   10px   0;
+   text-align: center; 
+}
+
+.about-me   .about-me-image {
+   background-image: url(../images/photos/about/steve-kuzanwa.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: top center;
+   background-color: #e74c3c;
+   width: 50%;
+   height: 550px;
+}
+
+/** About Me Title **/
+
+.about-me  .this-is-me .title {
+   font-size: 30px;
+}
+
+.about-me  .this-is-me .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #fff;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.about-me  .this-is-me h2 {
+    margin-bottom: 58px; 
+}
+
+/** About Me Description **/
+
+.about-me  .this-is-me p {
+    font-size: 18px;
+    line-height: 150%;
+    max-width: 580px;
+    margin: 0 auto;
+   
+}
+
+
+/*************** MEDIA QUERIES FOR THE ABOUT ME SECTION ****************/
+
+@media only screen and (max-width: 800px) {
+ 
+     .about-me  .this-is-me {
+      padding: 71px   2%   0;
+     }
+}
+
+
+@media only screen and (max-width: 650px) {
+     .about-me {
+          height: auto;
+     }
+    
+     .about-me  div {
+          float: none;
+     }
+    
+     .about-me  .this-is-me  {
+          padding: 71px   10px   60px;
+          width:  100%;
+          height: auto;
+     }
+    
+      .about-me  .this-is-me h2 {
+           margin-bottom: 28px; 
+      } 
+    
+     .about-me   .about-me-image {
+          width: 100%;
+          height: 600px;
+     }
+    
+}
+
+@media only screen and (max-width: 560px) {
+    
+     .about-me  .this-is-me .title {
+       font-size: 25px;
+     }
+
+     .about-me  .this-is-me .title:after {
+       height: 6px;
+       width: 42px;
+       margin-top: 10px;
+     }
+}
+
+@media only screen and (max-width: 480px) {
+    
+     .about-me  .this-is-me p {
+        font-size: 16px;
+        line-height: 150%;
+    }
+}
+
+
+
+
+/****************************************************/
+/************** END: ABOUT ME SECTION ***************/
+/****************************************************/
+
+
+
+
+/****************************************************/
+/************** START: SKILLS SECTION ***************/
+/****************************************************/
+
+
+.skills  .container {
+    padding: 81px   10px   0;
+    text-align: center; 
+
+}
+
+.skills  #hereAreTheSkills {
+    padding: 51px   10px   0;
+    text-align: center; 
+
+}
+
+/** Skills Introduction **/
+
+.skills .title {
+   font-size: 30px;
+}
+
+.skills .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #e74c3c;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.skills p {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.skills #theSkills p {
+    display: block;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/** My Skills **/
+
+.skills .mySkills {
+    margin: 1% 1% 1%;
+    float: left;
+    width: 31.3333333333%;
+}
+
+.skills h2 {
+    margin-bottom: 18px; 
+}
+
+.skills #photoshop {
+    background-image: url(../images/icons/photoshop.png);
+}
+
+.skills #adobe-xd {
+    background-image: url(../images/icons/adobe-xd.png);
+}
+
+.skills #html {
+    background-image: url(../images/icons/html.png);
+}
+
+.skills #css {
+    background-image: url(../images/icons/css.png);
+}
+
+.skills #javascript {
+    background-image: url(../images/icons/javascript.png);
+}
+
+.skills #responsiveDesign {
+    background-image: url(../images/icons/responsiveDesign.png);
+}
+
+.skills #bootstrap {
+    background-image: url(../images/icons/bootstrap.png);
+}
+
+.skills #sass {
+    background-image: url(../images/icons/sass.png);
+}
+
+.skills #frontEndOptimization {
+    background-image: url(../images/icons/frontEndOptimization.png);
+}
+
+.skills #browserCompatibility {
+    background-image: url(../images/icons/browserCompatibility.png);
+}
+
+.skills #uxDesign {
+    background-image: url(../images/icons/uxDesign.png);
+}
+
+.skills #seo {
+    background-image: url(../images/icons/seo.png);
+}
+
+.skills #facebook {
+    background-image: url(../images/icons/facebook.png);
+}
+
+.skills #shopify {
+    background-image: url(../images/icons/shopify.png);
+}
+
+.skills #premiere-pro {
+    background-image: url(../images/icons/premiere-pro.png);
+}
+
+
+.skills #photoshop,
+.skills #adobe-xd,
+.skills #html,
+.skills #css,
+.skills #javascript,
+.skills #responsiveDesign,
+.skills #bootstrap, 
+.skills #sass,
+.skills #frontEndOptimization,
+.skills #browserCompatibility, 
+.skills #uxDesign,
+.skills #seo,
+.skills #facebook,
+.skills #shopify,
+.skills #premiere-pro {
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 100px;
+}
+
+.skills .mySkills h2 {
+    font-size: 20px;
+}
+
+.skills .mySkills p {
+    font-size: 16px;
+    margin-bottom: 38px;
+}
+
+
+/*************** MEDIA QUERIES FOR THE SKILLS SECTION ****************/
+
+@media only screen and (max-width: 1100px) {
+     .skills .mySkills {
+        width: 48%;
+     }
+}
+
+@media only screen and (max-width: 952px) {
+    
+     .skills .mySkills h2 {
+        font-size: 22px;
+    }
+    
+    .skills  #hereAreTheSkills {
+        margin-bottom: 21px;
+    }
+    
+    .skills .mySkills {
+         width: 100%;
+         float: none;
+         margin: 0  0  50px;
+     }
+}
+
+
+@media only screen and (max-width: 480px) {
+     .skills .title {
+       font-size: 25px;
+     }
+
+     .skills .title:after {
+       height: 6px;
+       width: 42px;
+       margin-top: 10px;
+     }
+    
+}
+
+/****************************************************/
+/*************** END: SKILLS SECTION ****************/
+/****************************************************/
+
+
+
+/*********************************************************************/
+/************** START: BUILDING SLEEK WEBSITES SECTION ***************/
+/*********************************************************************/
+
+.buildingSleekWebsites {
+   background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/skills/sleekWebsites.jpg);
+   background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/skills/sleekWebsites.jpg); 
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   height: 325px;
+   color: #fff;
+   margin-top: 42px;
+}
+
+.buildingSleekWebsites .container  {
+    font-size: 24px;
+    text-align: center;
+    padding: 140px   10px 130px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 150%;
+   
+}
+
+
+/*************** MEDIA QUERIES FOR THE BUILDING SLEEK WEBSITES SECTION ****************/
+
+@media only screen and (max-width: 320px) {
+    .buildingSleekWebsites .container  {
+        padding: 130px   10px  130px;
+       
+    }
+}
+
+/*******************************************************************/
+/************** END: BUILDING SLEEK WEBSITES SECTION ***************/
+/*******************************************************************/
+
+
+
+
+/******************************************************/
+/**************** START: WORK SECTION *****************/
+/******************************************************/
+
+.work {
+    margin-bottom: 80px;
+}
+
+.work .container {
+    text-align: center;
+    padding: 81px   10px   0;
+}
+
+/** Work Introduction **/
+
+.work .title {
+   font-size: 30px;
+}
+
+.work .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #e74c3c;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.work h2  {
+    margin-bottom: 28px; 
+}
+
+.work p {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.work  p#myWorks{
+    margin: 0 auto;
+    max-width: 800px;
+    
+}
+
+
+/** Work - Filtering Menu **/
+
+#myProjects ul.portfolio-filter {
+    list-style-type: none;
+    margin: 30px auto 28px;
+    padding: 0;
+    display: block;
+}
+
+#myProjects ul.portfolio-filter li {
+   display: inline-block;
+}
+
+#myProjects ul.portfolio-filter li a {
+    background-color: #fff;
+    color: #e74c3c;
+    border: 2px solid #e74c3c;
+    display: block;
+    font-weight: bold; 
+    text-align: center;
+    padding: 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+#myProjects ul.portfolio-filter li a.active {
+    color: #fff;
+    background-color: #e74c3c;
+    transition: all  0.5s;
+}
+
+
+
+/** Work Projects **/
+
+.work ul.workProjects {
+    list-style-type: none;
+    margin-top: 50px;
+}
+
+.work ul.workProjects li {
+    width: 48%;
+    float: left;
+    margin: 1%;
+    overflow: hidden;
+    position: relative;
+    line-height: 0;
+}
+
+.work ul.workProjects img {
+    width: 100%;
+}
+
+
+.work ul.workProjects li .photoOverlay {
+    padding:  28% 0;
+    position: absolute;
+    background-color: rgba(231, 76, 60, 0.8);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    -webkit-transition: all  0.5s;
+    transition: all  0.5s;
+    text-align: center;
+    width: 100%;
+    -webkit-transform: translateY(-110%);
+    transform: translateY(-110%);
+}
+
+.work ul.workProjects li .caption:hover .photoOverlay {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.work ul.workProjects li .caption .photoOverlay h2 {
+    margin-bottom: 10%;  
+}
+
+.work ul.workProjects li .caption .photoOverlay a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px 10px;
+    border: 2px solid #fff; 
+    -webkit-transition: all 0.3s; 
+    transition: all 0.3s;
+}
+
+.work ul.workProjects li .caption .photoOverlay a:hover {
+    color: #e74c3c;
+    background-color: #fff;
+}
+
+
+/*************** MEDIA QUERIES FOR THE WORK SECTION ****************/
+
+
+@media only screen and (max-width: 768px) {
+    .work ul.workProjects li .caption .photoOverlay h2 {
+       margin-bottom: 15%;  
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .work ul.workProjects li .caption .photoOverlay h2 {
+       font-size: 18px; 
+    }
+}
+
+
+
+@media only screen and (max-width: 480px) {
+    .work .title {
+       font-size: 25px;
+     }
+
+    .work .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+    
+    
+    #myProjects ul.portfolio-filter li a {
+        margin: 0;
+    }
+    
+    
+    
+    
+    .work ul.workProjects li {
+        width: 100%;
+        float: none;
+        margin: 0  0 10px;
+    }
+    
+    .work ul.workProjects li .caption .photoOverlay h2 {
+       margin-bottom: 12%;
+       font-size: 25px;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    
+    #myProjects ul.portfolio-filter li {
+            margin-bottom: 2px;
+    }
+}
+
+
+@media only screen and (max-width: 320px) {
+    .work ul.workProjects li .caption .photoOverlay h2 {
+       margin-bottom: 15%;
+       font-size: 18px;
+    }
+}
+
+
+
+/******************************************************/
+/****************** END: WORK SECTION *****************/
+/******************************************************/
+
+
+
+/*********************************************************************/
+/************** START: BUILDING SLEEK WEBSITES SECTION ***************/
+/*********************************************************************/
+
+.findMeHere {
+   background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/skills/backgroundImage.jpg);
+   background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/skills/backgroundImage.jpg); 
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   height: 325px;
+   color: #fff;
+   margin-top: 52px;
+}
+
+
+.findMeHere  .container{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 90px   10px  0;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 150%;
+   
+}
+
+.findMeHere  .container p {
+    font-size: 30px;
+}
+
+
+.findMeHere  .container span {
+    font-weight: 300;
+    font-size: 24px;
+}
+
+/** Social Media Icons **/
+
+.findMeHere .container .socialMedia a {
+    text-decoration: none;
+}
+
+.findMeHere .socialMedia .connectWithMe {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.findMeHere .socialMedia  .connectWithMe div {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 9px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid  #fff;
+    background-color:  transparent;
+    color: #fff;
+    border-radius: 100px;
+    text-align: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.findMeHere .socialMedia .connectWithMe  div.github{
+    padding: 10px 10px;
+}
+
+.findMeHere .socialMedia .connectWithMe div:hover {
+    background-color: #fff;
+    color: #e74c3c;
+    border: 1px solid #fff;
+}
+
+
+
+/*************** MEDIA QUERIES FOR THE BUILDING SLEEK WEBSITES SECTION ****************/
+
+@media only screen and (max-width: 435px) {
+    
+      .findMeHere  .container p {
+          font-size: 25px;
+      }
+   
+}
+
+
+@media only screen and (max-width: 380px) {
+      
+     .findMeHere .socialMedia .connectWithMe div,
+     .findMeHere .socialMedia .connectWithMe  div.github {
+         padding: 0 0 15px;
+         width: 40px;
+         height: 40px;
+      }
+    
+     .findMeHere .container i {
+         font-size: 0.85em;
+      }
+    
+     
+     .findMeHere .container .fa-lg {
+         vertical-align: 0;
+     }
+
+   
+}
+
+
+
+@media only screen and (max-width: 287px) {
+    
+      .findMeHere  .container  {
+          padding: 50px 10px 0;
+      }
+}
+
+
+
+/*******************************************************************/
+/************** END: BUILDING SLEEK WEBSITES SECTION ***************/
+/*******************************************************************/
+
+
+
+/**********************************************************/
+/************** START: CONTACT ME SECTION *****************/
+/**********************************************************/
+
+.contactMe .container{
+    padding: 81px   10px   0;
+    text-align: center;
+   
+}
+
+/** Contact Me Introduction **/
+
+.contactMe .title  {
+   font-size: 30px;
+}
+
+.contactMe  .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #e74c3c;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.contactMe h2  {
+    margin-bottom: 28px;
+   
+}
+
+.contactMe p {
+    font-size: 18px;
+    max-width: 800px;
+    line-height: 150%;
+    margin: 0 auto;
+}
+
+
+/** Contact Details **/
+
+.contactMe #contact_details {
+    padding: 0  10px;
+    margin-top: 61px;
+}
+
+.contactMe #contact_details span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/** Contact Detail Icons **/
+.contactMe #address {
+    background-image: url(../images/icons/location.png);
+}
+
+.contactMe #phoneNumber {
+    background-image: url(../images/icons/telephone.png);
+}
+
+.contactMe #writeMail {
+    background-image: url(../images/icons/email.png);
+}
+
+.contactMe #address,
+.contactMe #phoneNumber,
+.contactMe #writeMail   {
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 90px;
+    margin-bottom: 81px;
+}
+
+.contactMe a {
+    text-decoration: none;
+    color: #000;
+}
+
+/*************** MEDIA QUERIES FOR THE ME CONTACT SECTION ****************/
+
+
+@media only screen and (max-width: 700px) {
+    
+    .contactMe .col {
+        float: none;
+        margin: 0;
+    }
+    
+    
+    .contactMe #address, .contactMe #phoneNumber, .contactMe #writeMail {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .contactMe #contact_details span {
+        font-size: 22px;
+    }
+    
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .contactMe .title {
+        font-size: 25px;
+     }
+
+    .contactMe .title:after {
+        height:6px;
+        width: 42px;
+        margin-top: 10px;
+    }
+    
+    .contactMe p {
+        font-size: 16px;
+    }  
+   
+}
+
+@media only screen and (max-width: 320px) {
+    
+    .contactMe .container{
+        padding: 71px   10px   0;
+    }
+   
+}
+
+/**********************************************************/
+/************** END: CONTACT ME SECTION *******************/
+/**********************************************************/
+
+
+
+/****************************************************/
+/*************** START: MAP SECTION *****************/
+/****************************************************/
+
+#map {
+    width: 100%;
+    height: 532px;
+    background-color: #e74c3c;
+}
+
+@media only screen and (max-width: 320px) {
+    #map {
+        margin-top: 41px;
+    }
+   
+}
+
+
+/******************************************************/
+/***************** END: MAP SECTION *******************/
+/******************************************************/
+
+
+
+/******************************************************/
+/*************** START: FOOTER SECTION ****************/
+/******************************************************/
+
+.footer .container .copyright {
+    text-align: left;
+    padding: 56px 10px;
+}
+
+.footer .container .socialMedia {
+    text-align: left;
+    padding: 47px 0;
+}
+
+.footer .container .copyright a {
+    font-weight: bold;
+    text-decoration: none;
+    color:  #e74c3c;
+}
+
+/** Social Media Icons **/
+.footer .get-connected {
+    float: right;
+}
+
+.footer .get-connected div {
+    float: left;
+    margin: 0 10px;
+    padding: 9px 9px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid  #e74c3c;
+    background-color:  #e74c3c;
+    color: #fff;
+    border-radius: 100px;
+    text-align: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.footer .get-connected div:hover {
+    background-color: #fff;
+    color: #d2054d;
+    border: 1px solid #e74c3c;
+}
+
+.footer .container .socialMedia a {
+    text-decoration: none;
+}
+
+/** Scroll To Top **/
+
+.scroll-to-top {
+     right:20px;
+     bottom:20px;
+     font-size: 25px;
+     padding: 5px 15px 10px;
+     background-color: #e74c3c;
+     color: #fff;
+     border: 1px solid #fff;
+     position:fixed;
+     text-decoration: none; 
+     -webkit-transition: .3s; 
+     transition: .3s;
+     display: none;
+}
+
+.scroll-to-top:hover {  
+     background-color: #570901;
+}
+
+/*************** MEDIA QUERIES FOR THE FOOTER SECTION ****************/
+
+@media only screen and (max-width: 768px) {
+    
+    .footer .container .copyright, .footer .container .socialMedia{
+        text-align: center;
+        width: 100%;
+     }
+    
+    .footer .get-connected  {
+        float: none;
+    }
+    
+     .footer .get-connected  div {
+        text-align: center;
+        float: none;
+        display: inline-block;
+    }
+    
+    .footer .container .copyright {
+        padding: 56px 10px 10px;
+    }
+
+    .footer .container .socialMedia {
+        padding: 0  0  47px;
+    }
+    
+    .footer .col {
+        margin: 0;
+    }
+    
+   
+}
+
+
+/******************************************************/
+/*************** END: FOOTER SECTION ******************/
+/******************************************************/
+
+
+
+/****************************************************************************************************************/
+/****************************************************************************************************************/
+/****************************************************************************************************************/
+/*** START: PROJECT PAGES - STEVE KUZANWA PAGE, MJK PAGE, KEYSON PAGE, YVEKAN PAGE, NORKUZ PAGE, MAELICE PAGE ***/
+/****************************************************************************************************************/
+/****************************************************************************************************************/
+/****************************************************************************************************************/
+
+/**************************************************************/
+/*************** START: HEADER PROJECT SECTION ****************/
+/**************************************************************/
+
+.header .bg-project1-Image {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/bg-mjk-beauty.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/bg-mjk-beauty.jpg);
+    background-position: 50% 40%;
+}
+
+.header .bg-project2-Image {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/bg-sidonie-renovation.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/bg-sidonie-renovation.jpg);
+    background-position: 50% 50%;
+}
+
+.header .bg-project3-Image {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/bg-yvekan-marketing.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/bg-yvekan-marketing.jpg);
+    background-position: 50% 5%;
+}
+
+.header .bg-project4-Image {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/bg-keyson-dental.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/bg-keyson-dental.jpg);
+    background-position: 50% 5%;
+}
+
+.header .bg-project5-Image {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/bg-guykan-car-wash.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/bg-guykan-car-wash.jpg);
+    background-position: top center;
+}
+
+.header .bg-project6-Image {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/bg-florida-car-repair.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/bg-florida-car-repair.jpg);
+    background-position: top center;
+}
+
+.header .bg-project7-Image {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/bg-norkuz-forex.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/bg-norkuz-forex.jpg);
+    background-position: 50% 1%;
+}
+
+.header .bg-project8-Image {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/bg-stekuz.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/bg-stekuz.jpg);
+    background-position: top center;
+}
+
+.header .bg-project9-Image {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/bg-rsvp-app.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/bg-rsvp-app.jpg);
+    background-position: 50% 30%;
+}
+
+.header .bg-project10-Image {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/bg-budget-app.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/bg-budget-app.jpg);
+    background-position: 50% 30%;
+}
+
+.header .bg-project11-Image {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/bg-budget-app.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/bg-memory-game.jpg);
+    background-position: 50% 40%;
+}
+
+.header .bg-project12-Image {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/ui-ux-designs/bg-hiired-ui-ux-designs.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/ui-ux-designs/bg-hiired-ui-ux-designs.jpg);
+    background-position: center;
+}
+
+.header .bg-project13-Image {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/ui-ux-designs/bg-hooked-meet-people.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/ui-ux-designs/bg-hooked-meet-people.jpg);
+    background-position: top;
+}
+
+
+
+.header .bg-project1-Image,
+.header .bg-project2-Image,
+.header .bg-project3-Image,
+.header .bg-project4-Image,
+.header .bg-project5-Image,
+.header .bg-project6-Image,
+.header .bg-project7-Image,
+.header .bg-project8-Image,
+.header .bg-project9-Image,
+.header .bg-project10-Image,
+.header .bg-project11-Image, 
+.header .bg-project12-Image, 
+.header .bg-project13-Image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+.header-project {
+    z-index: 1;
+	position: relative;
+    height: 500px;
+}
+
+.header .bg-project1-Image,
+.header .bg-project2-Image,
+.header .bg-project3-Image, 
+.header .bg-project4-Image,
+.header .bg-project5-Image,
+.header .bg-project6-Image,
+.header .bg-project7-Image,
+.header .bg-project8-Image,
+.header .bg-project9-Image, 
+.header .bg-project10-Image, 
+.header .bg-project11-Image, 
+.header .bg-project12-Image, 
+.header .bg-project13-Image {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+/** Header Subtitle ***/
+
+.header .project-title {
+    text-align: center;
+    font-size: 51px;
+    color: #fff;
+    width: 100%;
+    padding: 220px 20px  0;
+    background-color: transparent;
+}
+
+.header .project-details {
+    text-align: center;
+    font-size: 40px;
+    padding: 0 20px;
+    font-weight: 300;
+    color: #fff;
+}
+
+/*************** MEDIA QUERIES FOR THE HEADER SECTION ****************/
+
+
+@media only screen and (max-width: 1024px) {
+
+    .header .project-title {
+        font-size: 41px;
+        width: 100%;
+    }
+
+    .header .project-details {
+        font-size: 30px;
+        padding: 0 10px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) { 
+
+    .header .bg-project1-Image {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/small-bg-mjk-beauty.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/small-bg-mjk-beauty.jpg);
+    }
+    
+    .header .bg-project2-Image {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/small-bg-sidonie-renovation.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/small-bg-sidonie-renovation.jpg);
+    }
+    
+    .header .bg-project3-Image {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/small-bg-yvekan-marketing.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/small-bg-yvekan-marketing.jpg);
+    }
+
+    .header .bg-project4-Image {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/small-bg-keyson-dental.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/small-bg-keyson-dental.jpg);
+    }
+    
+    .header .bg-project5-Image {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/small-bg-guykan-car-wash.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/small-bg-guykan-car-wash.jpg);
+    }
+    
+    .header .bg-project6-Image {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/small-bg-florida-car-repair.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/small-bg-florida-car-repair.jpg);
+    }
+    
+    .header .bg-project7-Image {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/small-bg-norkuz-forex.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/small-bg-norkuz-forex.jpg);
+    }
+    
+    .header .bg-project8-Image {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/work/small-bg-stekuz.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/work/small-bg-stekuz.jpg);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    .header .project-title {
+        font-size: 31px;
+        padding: 230px 20px  0;
+    }
+
+    .header .details {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .header .project-title {
+        font-size: 25px;
+        padding: 240px 20px  0;
+    }
+
+    .header .project-details {
+        font-size: 20px;
+    }
+    
+}
+
+
+/***********************************************************************************************************************/
+/*** END: HEADER PROJECT SECTION - STEVE KUZANWA PAGE, MJK PAGE, KEYSON PAGE, YVEKAN PAGE, NORKUZ PAGE, MAELICE PAGE ***/
+/***********************************************************************************************************************/
+
+
+/***********************************************************************************************************************/
+/*** START: THE PROJECT  SECTION - STEVE KUZANWA PAGE, MJK PAGE, KEYSON PAGE, YVEKAN PAGE, NORKUZ PAGE, MAELICE PAGE ***/
+/***********************************************************************************************************************/
+
+.the-project .container {
+    padding: 71px   10px   51px;
+    text-align: center;
+}
+
+
+/** the-project Introduction **/
+
+.the-project .title {
+   font-size: 30px;
+   font-weight: bold;
+}
+
+.the-project .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #e74c3c;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+ 
+.the-project h2  {
+    margin-bottom: 28px;
+}
+
+.the-project p {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.the-project .project-features {
+    width: 48%;
+    margin: 1%;
+    float: left;
+    text-align: left;
+}
+
+
+/*************** MEDIA QUERIES FOR THE PROJECT SECTION ****************/
+
+@media only screen and (max-width: 480px) {
+    .the-project .project-features {
+        width:  100%;
+        margin-top: 20px;
+        float: none;
+        text-align: center;
+    }
+    
+    .the-project .title {
+        font-size: 25px;
+    }
+
+    .the-project .title:after {
+       height: 6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+    
+}
+
+/********************************************************************************************************************/
+/*** END: THE PROJECT SECTION - STEVE KUZANWA PAGE, MJK PAGE, KEYSON PAGE, YVEKAN PAGE, NORKUZ PAGE, MAELICE PAGE ***/
+/********************************************************************************************************************/
+
+
+/*****************************************************************************************************************************/
+/*** START: THE PROJECT PART 2 SECTION - STEVE KUZANWA PAGE, MJK PAGE, KEYSON PAGE, YVEKAN PAGE, NORKUZ PAGE, MAELICE PAGE ***/
+/*****************************************************************************************************************************/
+
+.the-project-part2 { 
+    background-color: #efefef;
+}
+
+
+.the-project-part2 .container {
+    padding: 71px   10px   30px;
+    text-align: center;
+}
+
+
+/** The Project Part 2 Introduction **/
+
+.the-project-part2 .title {
+   font-size: 30px;
+   font-weight: bold;
+}
+
+.the-project-part2 .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #e74c3c;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+
+.the-project-part2 h2  {
+    margin-bottom: 28px;
+}
+
+.the-project-part2 img {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 50px;
+   
+}
+
+/*************** MEDIA QUERIES FOR THE PROJECT PART 2 SECTION ****************/
+
+
+@media only screen and (max-width: 480px) {
+    .the-project-part2 .title {
+        font-size: 25px;
+    }
+
+    .the-project-part2 .title:after {
+       height: 6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+    
+}
+
+
+/***************************************************************************************************************************/
+/*** END: THE PROJECT PART 2 SECTION - STEVE KUZANWA PAGE, MJK PAGE, KEYSON PAGE, YVEKAN PAGE, NORKUZ PAGE, MAELICE PAGE ***/
+/***************************************************************************************************************************/
+
+
+/*******************************************************************************************************************************/
+/*** START: THE PROJECT PART 3 SECTION - - STEVE KUZANWA PAGE, MJK PAGE, KEYSON PAGE, YVEKAN PAGE, NORKUZ PAGE, MAELICE PAGE ***/
+/*******************************************************************************************************************************/
+
+.the-project-part3 .container {
+    padding: 71px   10px   0;
+    text-align: center;
+}
+
+
+/** The  Project  Part 3 Introduction **/
+
+.the-project-part3 .title {
+   font-size: 30px;
+}
+
+.the-project-part3 .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #e74c3c;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+ 
+.the-project-part3 p {
+    font-size: 16px;
+    line-height: 140%;
+}
+
+
+.the-project-part3 img {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 50px;
+   
+}
+
+.the-project-part3 .view-live-site a:link, 
+.the-project-part3 .view-live-site a:visited {
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight:bold;
+    color: #fff;
+    background-color: #e74c3c;
+    border: 3px solid #e74c3c;
+    padding: 20px 10px;
+    display: block;
+    max-width: 200px;
+    margin: 10px auto 71px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; 
+}
+
+.the-project-part3 .view-live-site a:hover, 
+.the-project-part3 .view-live-site a:active {
+    color: #e74c3c;
+    background-color: #fff;
+    border: 3px solid #e74c3c;
+}
+
+
+/*************** MEDIA QUERIES FOR THE PROJECT PART 3 SECTION ****************/
+
+
+@media only screen and (max-width: 480px) {
+    
+    .the-project-part3 .title {
+        font-size: 25px;
+    }
+
+    .the-project-part3 .title:after {
+       height: 6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+    
+}
+
+/*******************************************************************************************************************/
+/*** END: THE PROJECT PART 3 - STEVE KUZANWA PAGE, MJK PAGE, KEYSON PAGE, YVEKAN PAGE, NORKUZ PAGE, MAELICE PAGE ***/
+/*******************************************************************************************************************/
+
+
+
+/*************************************************************************************************************************/
+/*** START: OTHER PROJECTS SECTION - STEVE KUZANWA PAGE, MJK PAGE, KEYSON PAGE, YVEKAN PAGE, NORKUZ PAGE, MAELICE PAGE ***/
+/*************************************************************************************************************************/
+
+/** Other Projects **/
+
+.other-projects ul.workProjects {
+    list-style-type: none;
+}
+
+.other-projects ul.workProjects li {
+    width: 50%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    line-height: 0;
+}
+
+.other-projects ul.workProjects img {
+    width: 100%;
+    display: block;
+}
+
+
+.other-projects ul.workProjects li .photoOverlay {
+    padding:  28% 0;
+    position: absolute;
+    background-color: rgba(231, 76, 60, 0.8);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    -webkit-transition: all  0.5s;
+    transition: all  0.5s;
+    text-align: center;
+    width: 100%;
+    -webkit-transform: translateX(-110%);
+    transform: translateX(-110%);
+}
+
+.other-projects ul.workProjects li .caption:hover .photoOverlay {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.other-projects ul.workProjects li .caption .photoOverlay h2 {
+    margin-bottom: 10%;  
+}
+
+.other-projects ul.workProjects li .caption .photoOverlay a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px 10px;
+    border: 2px solid #fff; 
+    -webkit-transition: all 0.3s; 
+    transition: all 0.3s;
+}
+
+.other-projects ul.workProjects li .caption .photoOverlay a:hover {
+    color: #e74c3c;
+    background-color: #fff;
+}
+
+/*************** MEDIA QUERIES FOR THE OTHER PROJECTS SECTION ****************/
+
+@media only screen and (max-width: 700px) {
+    .other-projects ul.workProjects li .caption .photoOverlay h2 {
+        font-size: 18px; 
+        margin-bottom: 12%;
+    }
+   
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    
+    .other-projects ul.workProjects li {
+        width: 100%;
+        float: none;
+    }
+    
+    .other-projects ul.workProjects li .caption .photoOverlay h2 {
+       margin-bottom: 12%;
+       font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .other-projects ul.workProjects li .caption .photoOverlay h2 {
+       margin-bottom: 15%;
+       font-size: 18px;
+    }
+}
+
+
+/***********************************************************************************************************************/
+/*** END: OTHER PROJECTS SECTION - STEVE KUZANWA PAGE, MJK PAGE, KEYSON PAGE, YVEKAN PAGE, NORKUZ PAGE, MAELICE PAGE ***/
+/***********************************************************************************************************************/
+
+
+/**************************************************************************************************************/
+/**************************************************************************************************************/
+/**************************************************************************************************************/
+/*** END: PROJECT PAGES - STEVE KUZANWA PAGE, MJK PAGE, KEYSON PAGE, YVEKAN PAGE, NORKUZ PAGE, MAELICE PAGE ***/
+/**************************************************************************************************************/
+/**************************************************************************************************************/
+/**************************************************************************************************************/
+
+
+/******************************************************************************/
+/******************* START: Customising The SLICK Plugin  *********************/
+/******************************************************************************/
+
+/** Dots **/
+
+.slick-dots {
+    bottom: 25px;
+}
+
+.slick-dots li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  text-indent: -999em;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.slick-dots li.slick-active {
+  background: #fff;
+  cursor: default;
+}
+
+
+/** Arrows **/
+
+.slick-prev {
+    left: 25px;
+    z-index: 999;
+}
+
+.slick-next {
+    right: 25px;
+
+}
+    
+
+/******************************************************************************/
+/******************** END: Customising The SLICK Plugin  **********************/
+/******************************************************************************/
+
+
+
+
+
+/******************************************************************************/
+/***************  START: Customising Magnific Pop Up Plugin  ******************/
+/******************************************************************************/
+
+
+
+/******* Zoom effect *******/
+
+/* start state */
+.mfp-zoom-in  .mfp-with-anim {
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; 
+    -webkit-transform: scale(0.8); 
+    transform: scale(0.8); 
+}
+  
+.mfp-zoom-in.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+  
+/* animate in */
+
+.mfp-zoom-in.mfp-ready  .mfp-with-anim {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1); 
+}
+.mfp-zoom-in.mfp-ready.mfp-bg {
+      opacity: 0.8; 
+}
+ 
+/* animate out */
+.mfp-zoom-in.mfp-removing .mfp-with-anim {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8); 
+      opacity: 0;
+}
+.mfp-zoom-in.mfp-removing.mfp-bg {
+      opacity: 0;
+}
+    
+ 
+/******************************************************************************/
+/****************  END: Customising Magnific Pop Up Plugin  *******************/
+/******************************************************************************/
+
+
+
+
+
+/**********************************************************************/
+/****************  START: Customising Typed Plugin  *******************/
+/**********************************************************************/
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@media only screen and (max-width: 580px) {
+   .typed-cursor{
+       display: none;
+    }
+    
+}
+
+
+
+/********************************************************************/
+/****************  END: Customising Typed Plugin  *******************/
+/********************************************************************/
+
+
+/*******************************************************************/
+/******************* Hidding Elements On Slide *********************/
+/*******************************************************************/
+
+.js-hidden  {
+    visibility: hidden;
+}
+
+/****************************************************************/
+/******************* END: Elements On Slide *********************/
+/****************************************************************/
+
+
+
